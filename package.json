@@ -1,0 +1,29 @@
+{
+  "name": "quas",
+  "version": "0.0.1",
+  "description": "quasi-shader",
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/tsc",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeilKleistGao/quas.git"
+  },
+  "author": "NeilKleistGao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NeilKleistGao/quas/issues"
+  },
+  "homepage": "https://github.com/NeilKleistGao/quas#readme",
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "tslint": "^6.1.3",
+    "typescript": "^5.1.6"
+  },
+  "keywords": [
+    "typescript",
+    "shader"
+  ]
+}
