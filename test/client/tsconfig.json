@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "ES2015",
+    "outDir": "./",
+    "target": "ES2015",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "/three.js": ["../../node_modules/@types/three"],
+      "/jsm/*": ["../../node_modules/@types/three/examples/jsm/*"]
+    },
+    "plugins": [
+      {"transform": "../../dist"}
+    ]
+  },
+  "include": ["*.ts"],
+  "exclude": []
+}
