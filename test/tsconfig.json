@@ -8,6 +8,7 @@
     "target": "ES2015"
   },
   "include": [
-    "."
-  ]
+    "ts"
+  ],
+  "exclude": ["js", "html"]
 }

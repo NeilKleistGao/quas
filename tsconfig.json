@@ -5,12 +5,17 @@
     "outDir": "dist",
     "sourceMap": true,
     "strict": true,
-    "target": "ES2015"
+    "target": "ES2015",
+    "moduleResolution": "Node",
+    "skipLibCheck": true,
+    "paths": {
+      "/type-three": ["./node_modules/@types/three"]
+    }
   },
   "include": [
     "src"
   ],
   "exclude": [
-    "dist", "test"
+    "dist", "test", "node_modules"
   ]
 }
