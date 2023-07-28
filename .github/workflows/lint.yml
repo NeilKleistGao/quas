@@ -1,4 +1,4 @@
-name: Quas Test
+name: Lint Test
 on:
   push:
     branches: [ main ]
