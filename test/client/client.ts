@@ -1,5 +1,6 @@
 import * as THREE from '/three.js';
 import { OrbitControls } from '/jsm/controls/OrbitControls';
+import { $program } from "../../dist"
 
 const scene: THREE.Scene = new THREE.Scene();
 
@@ -12,9 +13,9 @@ document.body.appendChild(renderer.domElement);
 const controls = new OrbitControls(camera, renderer.domElement);
 
 const geometry: THREE.BoxGeometry = new THREE.BoxGeometry();
-const material: THREE.MeshBasicMaterial = new THREE.MeshBasicMaterial({ color: 0x00ff00, wireframe: true });
+const material: THREE.RawShaderMaterial = $program("", ""); // TODO:
 
-const cube: THREE.Mesh = new THREE.Mesh(geometry, material);
+const cube: THREE.Mesh = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({ color: 0x00ff00, wireframe: true }));
 scene.add(cube);
 
 camera.position.z = 2;
