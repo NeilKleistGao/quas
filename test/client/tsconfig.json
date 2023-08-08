@@ -11,7 +11,7 @@
       "/jsm/*": ["../../node_modules/@types/three/examples/jsm/*"]
     },
     "plugins": [
-      {"transform": "../../dist"}
+      {"transform": "../../dist", "threeJsNS": "THREE"}
     ]
   },
   "include": ["*.ts"],

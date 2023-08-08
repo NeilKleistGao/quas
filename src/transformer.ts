@@ -5,10 +5,12 @@ export class ShaderTransformer {
   private context: ts.TransformationContext;
   private checker: ts.TypeChecker;
   private visitor: ts.Visitor;
+  private threeJsNS: string;
 
-  constructor(context: ts.TransformationContext, checker: ts.TypeChecker) {
+  constructor(context: ts.TransformationContext, checker: ts.TypeChecker, threeJS: string) {
     this.context = context;
     this.checker = checker;
+    this.threeJsNS = threeJS;
     this.visitor = this.visit.bind(this);
   }
 

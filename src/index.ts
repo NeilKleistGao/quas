@@ -2,9 +2,13 @@ import * as transformers from "./transformer"
 import * as ts from "typescript";
 import * as THREE from "/type-three";
 
-export default (program: ts.Program): ts.TransformerFactory<ts.Node> => ctx => {
+export interface QuasConfig {
+  threeJsNS: string
+}
+
+export default (program: ts.Program, config?: QuasConfig): ts.TransformerFactory<ts.Node> => ctx => {
   const checker = program.getTypeChecker();
-  const transformer = new transformers.ShaderTransformer(ctx, checker);
+  const transformer = new transformers.ShaderTransformer(ctx, checker, (config)? config.threeJsNS : "THREE");
   return firstNode => {
     return transformer.run(firstNode as ts.SourceFile);
   }
