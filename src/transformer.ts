@@ -20,14 +20,14 @@ export class ShaderTransformer {
     for (const stmt of sf.statements) {
       if (ts.isImportDeclaration(stmt) && stmt.importClause && !stmt.importClause.isTypeOnly) {
         if (stmt.importClause.namedBindings && ts.isNamedImports(stmt.importClause.namedBindings)) {
-          const keep = stmt.importClause.namedBindings.elements.reduce((res, imp) => {
-            if (imp.isTypeOnly) return res;
+          const keep = stmt.importClause.namedBindings.elements.reduce((prev, imp) => {
+            if (imp.isTypeOnly) return prev;
             else {
               const sym = imp.name.escapedText.toString();
               if (this.isQuasName(sym)) {
                 return false;
               }
-              return res;
+              return prev;
             }
           }, true);
 
@@ -37,7 +37,7 @@ export class ShaderTransformer {
         }
       }
 
-      const res = this.visit(stmt) as Array<ts.Statement> | ts.Statement | undefined;
+      const res = this.visit(stmt) as ts.Statement[] | ts.Statement | undefined;
       if (res !== undefined) {
         if (Array.isArray(res)) {
           statements.push(...res);

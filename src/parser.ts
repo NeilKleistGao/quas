@@ -1,7 +1,7 @@
 import { Token } from "./tokenizer";
 
 export type Program = void; // TODO:
-export type Function = void; // TODO:
+export type Method = void; // TODO:
 export type Statement = void; // TODO:
 export type Expression = void; // TODO:
 
@@ -18,7 +18,7 @@ export class Parser {
     // TODO:
   }
 
-  parseFunction(): Function {
+  parseMethod(): Method {
     // TODO:
   }
 
