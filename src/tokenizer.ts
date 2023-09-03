@@ -1,6 +1,6 @@
 import { Location } from "./locations"
-import { keyword_list, reserved_list } from "./keywords"
-import { punctuation_list } from "./punctuation"
+import { keywordList, reservedList } from "./keywords"
+import { punctuationList } from "./punctuation"
 
 interface Identifier extends Location {
   type: "id",

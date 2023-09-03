@@ -1,6 +1,6 @@
 // @see https://registry.khronos.org/OpenGL/specs/es/2.0/GLSL_ES_Specification_1.00.pdf
 
-export const punctuation_list = [
+export const punctuationList = [
   "(", ")", "[", "]", ".", "++", "--",
   "+", "-", "~", "!",
   "*", "/", "%",
@@ -11,7 +11,7 @@ export const punctuation_list = [
   "&=", "^=", "|=", ",", ";"
 ];
 
-export const operator_priority = {
+export const operatorPriority = {
   "++": {
     "post": 2,
     "pref": 3

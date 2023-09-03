@@ -1,6 +1,6 @@
 // @see https://registry.khronos.org/OpenGL/specs/es/2.0/GLSL_ES_Specification_1.00.pdf
 
-export const keyword_list = [
+export const keywordList = [
   "attribute", "const", "uniform", "varying",
   "break", "continue", "do", "for", "while",
   "if", "else",
@@ -14,7 +14,7 @@ export const keyword_list = [
   "struct"
 ];
 
-export const reserved_list = [
+export const reservedList = [
   "asm",
   "class", "union", "enum", "typedef", "template", "this", "packed",
   "goto", "switch", "default",
